@@ -1,0 +1,33 @@
+[init]
+  defaultBranch = main
+[user]
+	name = nikozdev
+  email = n.zimin@vinteo.ru
+[core]
+  editor = nvim
+	pager = less -N -P \"%f[%p]=%l > \"
+[editor]
+  tool = nvim
+[diff]
+	tool = nvimdiff
+[difftool]
+	prompt = true
+[difftool "nvimdiff"]
+	cmd = "nvim -d \"$LOCAL\" \"$REMOTE\" "
+[merge]
+  tool = nvimdiff
+[commit]
+  verbose = true
+[alias]
+    lograph = log                               \
+        --date="format:y%gm%md%d[H%HM%M]%a"     \
+        --all --full-history                    \
+        --graph --left-right                    \
+        --decorate=short --format=fuller        \
+        --stat --abbrev-commit                  \
+        --no-expand-tabs --no-mailmap
+[color]
+    ui = true
+    pager = true
+[pull]
+	rebase = false

@@ -1,0 +1,13 @@
+CompileFlags:
+  CompilationDatabase: "./.qtc_clangd/"
+Index:
+  StandardLibrary: true
+  Background: true
+  Limits:
+    CodeCompletionLimitResults: 0
+    CodeCompletionLimitPreamble: 0
+    CodeCompletionLimitSingleFile: 0
+Hover:
+  ShowAKA: Yes
+Diagnostics:
+  UnusedIncludes: Strict
