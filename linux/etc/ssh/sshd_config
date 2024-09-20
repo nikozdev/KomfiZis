@@ -1,0 +1,82 @@
+# This is the sshd server system-wide configuration file;
+# See sshd_config(5) for more information;
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port 22
+AddressFamily any
+#ListenAddress 0.0.0.0
+#ListenAddress ::
+
+HostKey /etc/ssh/ssh_host_rsa_key
+
+# Ciphers and keying
+#RekeyLimit default none
+
+# Logging
+#SyslogFacility AUTH
+#LogLevel INFO
+
+# Authentication:
+
+LoginGraceTime 2m # disconnection after failed login;
+PermitRootLogin yes # prohibit-password
+StrictModes yes # check file modes and ownership of the user's files;
+MaxAuthTries 3
+MaxSessions 1
+
+PubkeyAuthentication yes
+
+AuthorizedKeysFile	.ssh/authorized_keys
+
+HostbasedAuthentication no # host keys in "/etc/ssh/ssh_known_hosts" are needed
+IgnoreUserKnownHosts no
+# don't read the user's ~/.rhosts and ~/.shosts files
+IgnoreRhosts yes
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication yes
+PermitEmptyPasswords no
+
+# Change to yes to enable challenge-response passwords
+KbdInteractiveAuthentication no
+
+# Set this to 'yes' to enable:
+# * PAM authentication;
+# * Account processing;
+# * Session processing;
+# If this is enabled:
+# * PAM authentication will be allowed through the KbdInteractiveAuthentication and PasswordAuthentication
+# Depending on your PAM configuration:
+# * PAM authentication via KbdInteractiveAuthentication may bypass "PermitRootLogin prohibit-password";
+# If you just want the PAM account and session checks to run without PAM authentication
+# * enable this;
+# * set PasswordAuthentication and KbdInteractiveAuthentication to 'no';
+UsePAM yes
+
+#AllowAgentForwarding yes
+#AllowTcpForwarding yes
+#GatewayPorts no
+X11Forwarding yes
+#X11DisplayOffset 10
+#X11UseLocalhost yes
+#PermitTTY yes
+PrintMotd no
+#PrintLastLog yes
+#TCPKeepAlive yes
+#PermitUserEnvironment no
+#Compression delayed
+#ClientAliveInterval 0
+#ClientAliveCountMax 3
+#UseDNS no
+#PidFile /run/sshd.pid
+#MaxStartups 10:30:100
+#PermitTunnel no
+#ChrootDirectory none
+#VersionAddendum none
+
+Banner none # no default banner path
+
+AcceptEnv LANG LC_*
+
+Subsystem sftp /usr/lib/openssh/sftp-server
