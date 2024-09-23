@@ -1,0 +1,15 @@
+fork = true
+idle = true
+
+frame = "full"
+maximized = true
+title-hidden = true
+theme = "dark"
+
+no-multigrid = false
+srgb = true
+vsync = true
+
+[font]
+normal = [ "BlexMono Nerd Font", "Noto Mono" ]
+size = 12
