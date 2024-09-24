@@ -1,0 +1,1 @@
+do shell script "/opt/homebrew/bin/neovide --fork --maximized"

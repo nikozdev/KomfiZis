@@ -1,0 +1,18 @@
+colors:
+  body: white
+  date: cyan
+  title: cyan
+default_hour: 0
+default_minute: 0
+display_format: fancy
+editor: nvim
+encrypt: false
+highlight: true
+indent_character: '|'
+journals:
+  livanota: ~/.local/share/livanota
+linewrap: 96
+tagsymbols: '@'
+template: ~/.config/jrnl/template.txt
+timeformat: y%ym%md%d-%a-h%Hm%Ms%S
+version: v4.1

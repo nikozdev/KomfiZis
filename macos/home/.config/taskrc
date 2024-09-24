@@ -1,0 +1,103 @@
+# $taskrc - task warrior configuration
+## web-links: https://taskwarrior.org
+## man-pages: task taskrc task-sync task-color,
+
+## fsys
+
+data.location=$XDG_DATA_HOME/taskwarrior
+hooks.location=$XDG_DATA_HOME/taskwarrior/hooks
+
+## info
+
+report.next.sort    = urgency+
+report.next.filter  = -DELETED -COMPLETED
+report.next.labels  = index,level,until,projname,tagslist,descript
+report.next.columns = id,urgency,due,project,tags,description.count
+
+report.prev.sort    = urgency-
+report.prev.filter  = -DELETED -COMPLETED
+report.prev.labels	= index,level,until,projname,tagslist,descript
+report.prev.columns = id,urgency,due,project,tags,description.count
+
+## time
+
+weekstart	= monday
+
+## find
+
+search.case.sensitive	= no
+
+## edit
+
+journal.time	= on
+journal.time.start.annotation	= init
+journal.time.stop.annotation	= quit
+
+## view
+
+# include dark-green-256.theme
+
+indent.annotation	= 4
+
+defaultwidth	= 96
+
+displayweeknumber	= yes
+
+# dateformat="Y-M-D-H"
+# dateformat.edit="Y-M-D-H"
+# dateformat.info="Y-M-D-H"
+# dateformat.report="Y-M-D-H"
+# dateformat.holiday="Y-M-D-H"
+# dateformat.annotation="Y-M-D-H"
+
+color	= on
+
+# color.active	= cyan
+# color.alternate	= cyan
+# color.blocked	= red
+# color.blocking	= red
+# color.completed	= green
+# color.deleted	= red
+
+# color.project.none	= white
+# color.tag.next        = white
+# color.tag.none        = white
+# color.tagged          = white
+
+# color.uda.priority.L  = white
+# color.uda.priority.M  = white
+# color.uda.priority.H  = white
+
+# color.burndown.done	    = green
+# color.burndown.pending    = white
+# color.burndown.started	= cyan
+
+# color.calendar.due	    = green
+# color.calendar.due.today	= green
+# color.calendar.holiday	= green
+# color.calendar.overdue	= green
+# color.calendar.scheduled	= green
+# color.calendar.today	    = green
+# color.calendar.weekend	= green
+# color.calendar.weeknumber	= green
+
+### theme
+
+#include light-16.theme
+#include light-256.theme
+#include dark-16.theme
+#include dark-256.theme
+#include dark-red-256.theme
+# include dark-green-256.theme
+#include dark-blue-256.theme
+#include dark-violets-256.theme
+#include dark-yellow-green.theme
+#include dark-gray-256.theme
+#include dark-gray-blue-256.theme
+#include solarized-dark-256.theme
+#include solarized-light-256.theme
+#include no-color.theme
+
+## rest
+
+news.version	= 2.6.0
