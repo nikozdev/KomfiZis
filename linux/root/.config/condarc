@@ -1,0 +1,4 @@
+envs_dirs:
+    - $XDG_CONFIG_HOME/conda/envs
+pkgs_dirs:
+    - $XDG_CONFIG_HOME/conda/pkgs
