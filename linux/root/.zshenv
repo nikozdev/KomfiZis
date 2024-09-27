@@ -74,24 +74,29 @@ export PATH="${PATH}:${XDG_DATA_HOME}/nvim/mason/bin"
 
 # tools
 
+#if [[ -n "$DISPLAY" ]] || [[ "$XDG_CURRENT_DESKTOP" ]]; then
+#    export VISUAL="nvim-neovide.sh"
+#else
+#    export VISUAL="nvim.sh"
+#fi
 export VISUAL="nvim"
 export VIDIFF="${VISUAL} -R -f -d -c 'cd ${GIT_PREFIX}' -c 'wincmd w' -c 'wincmd J' -c 'set wrap' ${LOCAL} ${REMOTE}"
 export VIMERG="${VISUAL} -f -d -c 'wincmd w' -c 'wincmd J' ${LOCAL} ${REMOTE} ${MERGED} -c 'set wrap'"
-alias nvim-config="nvim ${XDG_CONFIG_HOME}/nvim/init.lua"
+alias vieditor=$VISUAL
+alias viconfig=$VISUAL ${XDG_CONFIG_HOME}/nvim/init.lua
 
-export EDITOR="${VISUAL}"
-export SUDO_EDITOR="${EDITOR}"
+export EDITOR=$VISUAL
+export SUDO_EDITOR=$EDITOR
+export GIT_EDITOR=$EDITOR
 
 export PAGER="/usr/bin/less -N -P \"%f[%p]=%l > \""
 export MANPAGER="/usr/bin/less -N"
 
-export MERGETOOL="${VIMERG}"
+export MERGETOOL=$VIMERG
 
 export BROWSER="firefox"
 
 # utils
-
-export GIT_EDITOR="${EDITOR}"
 
 export FZF_CONFIG="${XDG_CONFIG_HOME}/.fzf.zsh"
 [ -f "${FZF_CONFIG}" ] && source "${FZF_CONFIG}"
