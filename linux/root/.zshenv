@@ -48,6 +48,10 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npmrc"
 
 alias docker="/usr/bin/docker --config ${XDG_CONFIG_HOME}/docker"
 
+export PYTHONHISTFILE=$XDG_CACHE_HOME/python_history
+
+export MYSQL_HISTFILE=$XDG_CACHE_HOME/mysql_history
+
 ## ext
 
 export ZK_NOTEBOOK_DIR="${XDG_DATA_HOME}/zk"
