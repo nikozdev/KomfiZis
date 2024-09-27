@@ -35,6 +35,9 @@ export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 
 export OPCUA_PKI_PATH='${XDG_DATA_HOME}/pki'
 
+export EDITRC=$XDG_CONFIG_HOME/editrc
+export INPUTRC=$XDG_CONFIG_HOME/inputrc
+
 ## dev
 
 export GIT_CONFIG_GLOBAL="${XDG_CONFIG_HOME}/gitconfig"
