@@ -97,7 +97,7 @@ export SUDO_EDITOR=$EDITOR
 export GIT_EDITOR=$EDITOR
 
 export PAGER="/usr/bin/less -N -P \"%f[%p]=%l > \""
-export MANPAGER="/usr/bin/less -N"
+export MANPAGER='nvim +Man!'
 
 export MERGETOOL=$VIMERG
 
