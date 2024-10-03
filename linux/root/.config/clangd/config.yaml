@@ -1,12 +1,8 @@
 CompileFlags:
-  CompilationDatabase: "./.qtc_clangd/"
+  CompilationDatabase: Ancestors
 Index:
   StandardLibrary: true
-  Background: true
-  Limits:
-    CodeCompletionLimitResults: 0
-    CodeCompletionLimitPreamble: 0
-    CodeCompletionLimitSingleFile: 0
+  Background: Build
 Hover:
   ShowAKA: Yes
 Diagnostics:
